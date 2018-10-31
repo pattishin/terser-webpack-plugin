@@ -56,6 +56,9 @@ class TerserPlugin {
   }
 
   static isSourceMap(input) {
+    console.log('isSourceMap =====> ');
+    console.log(input);
+
     // All required options for `new SourceMapConsumer(...options)`
     // https://github.com/mozilla/source-map#new-sourcemapconsumerrawsourcemap
     return Boolean(
@@ -68,6 +71,9 @@ class TerserPlugin {
   }
 
   static buildSourceMap(inputSourceMap) {
+    console.log('buildSourceMap =====> ');
+    console.log(inputSourceMap);
+
     if (!inputSourceMap || !TerserPlugin.isSourceMap(inputSourceMap)) {
       return null;
     }
